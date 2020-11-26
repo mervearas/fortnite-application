@@ -5,7 +5,7 @@ function ItemDetail({ match }) {
 
     useEffect(() => {
         fetchItem();
-    }, []);
+    }, []); // eslint-disable-line
 
     const [item, setItem] = useState({
         images: {}
@@ -24,7 +24,7 @@ function ItemDetail({ match }) {
     return (
         <div>
             <h1>{item.name}</h1>
-            <img src={item.images.featured} />
+            <img src={item.images.featured} alt={item.name}/>
         </div>
     );
 }
